@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+    <html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIOPT Platform - AI-Powered Network Optimization</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="aiopt-logo.png" alt="AIOPT Platform" height="40" class="me-2">
+                <span data-translate="company_name">AIOPT Platform</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home" data-translate="nav_home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-translate="nav_about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#solutions" data-translate="nav_solutions">Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#technology" data-translate="nav_technology">Technology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#demo" data-translate="nav_demo">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#results" data-translate="nav_results">Results</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-translate="nav_contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i>EN
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="switchLanguage('en')">English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="switchLanguage('sv')">Svenska</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="switchLanguage('fa')">فارسی</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="switchLanguage('ar')">العربية</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <video autoplay muted loop class="hero-bg-video">
+            <source src="aiopt-demo.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-white mb-4" data-translate="hero_title">
+                        AI-Powered Telecom Network Optimization
+                    </h1>
+                    <p class="lead text-white-50 mb-4" data-translate="hero_subtitle">
+                        AIOpt erbjuder innovativa, AI-drivna lösningar för optimering av telekomnätverk. 
+                        75% cost reduction. 99.9% uptime. AI-powered optimization that actually works.
+                    </p>
+                    <div class="hero-stats row mb-4">
+                        <div class="col-6">
+                            <div class="stat-item">
+                                <h3 class="text-primary fw-bold">75%</h3>
+                                <p class="text-white-50" data-translate="cost_reduction">Cost Reduction</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-item">
+                                <h3 class="text-primary fw-bold">99.9%</h3>
+                                <p class="text-white-50" data-translate="network_uptime">Network Uptime</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-rocket me-2"></i><span data-translate="get_started">Get Started</span>
+                        </a>
+                        <a href="#solutions" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-play me-2"></i><span data-translate="learn_more">Learn More</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <div class="ai-chart-container">
+                            <canvas id="aiChart" width="500" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-4" data-translate="about_title">About AIOpt AB</h2>
+                    <p class="lead text-muted" data-translate="about_description">
+                        AIOpt erbjuder innovativa, AI-drivna lösningar för optimering av telekomnätverk. Genom avancerad prediktiv analys och maskininlärning förbättrar vi nätverksprestanda, ökar tillförlitligheten och minimerar driftstopp. Vår plattform stödjer realtidsövervakning, intelligent trafikhantering och automatisk identifiering av nätverksproblem, vilket hjälper telekomoperatörer att förbättra servicekvaliteten och leverera en förstklassig kundupplevelse.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card text-center p-4">
+                        <img src="ai-brain.jpg" alt="AI Brain" class="feature-image">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-brain fa-3x" style="color: #00ff88;"></i>
+                        </div>
+                        <h4 data-translate="ai_intelligence">AI-Powered Intelligence</h4>
+                        <p class="text-muted" data-translate="ai_intelligence_desc">
+                            6 trained ML models with 100% anomaly detection accuracy for predictive network optimization.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center p-4">
+                        <img src="data-analytics.jpg" alt="Data Analytics" class="feature-image">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-chart-line fa-3x" style="color: #ffaa00;"></i>
+                        </div>
+                        <h4 data-translate="real_time_analytics">Real-Time Analytics</h4>
+                        <p class="text-muted" data-translate="real_time_analytics_desc">
+                            Live monitoring with interactive network maps and comprehensive performance analytics.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center p-4">
+                        <img src="network-security.jpg" alt="Network Security" class="feature-image">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-shield-alt fa-3x" style="color: #ff4444;"></i>
+                        </div>
+                        <h4 data-translate="enterprise_security">Enterprise Security</h4>
+                        <p class="text-muted" data-translate="enterprise_security_desc">
+                            Multi-vendor support with enterprise-grade security and zero-trust architecture.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-4" data-translate="solutions_title">Our Solutions</h2>
+                    <p class="lead text-muted" data-translate="solutions_subtitle">
+                        From reactive to proactive network management with AI-powered optimization solutions.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="solution-card p-4 bg-white rounded shadow-sm">
+                        <img src="telecom-network.jpg" alt="Real-Time Monitoring" class="solution-image">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-eye fa-2x text-primary me-3"></i>
+                            <h4 class="mb-0" data-translate="real_time_monitoring">Real-Time Monitoring</h4>
+                        </div>
+                        <p class="text-muted" data-translate="real_time_monitoring_desc">
+                            Interactive network maps with live status monitoring. See your network like never before with 
+                            real-time visibility into every cell site, every alarm, and every optimization opportunity.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i><span data-translate="live_network_visualization">Live network visualization</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-translate="real_time_alarm_management">Real-time alarm management</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-translate="performance_tracking">Performance tracking</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="solution-card p-4 bg-white rounded shadow-sm">
+                        <img src="ai-problem-detection.jpg" alt="AI Problem Detection" class="solution-image">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-robot fa-2x text-primary me-3"></i>
+                            <h4 class="mb-0" data-translate="ai_problem_detection">AI Problem Detection</h4>
+                        </div>
+                        <p class="text-muted" data-translate="ai_problem_detection_desc">
+                            Stop fighting fires. AIOPT predicts problems before they impact your customers with 
+                            100% anomaly detection accuracy and automated resolution recommendations.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i><span data-translate="predictive_maintenance">Predictive maintenance</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-translate="automated_resolution">Automated resolution</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-translate="proactive_alerts">Proactive alerts</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="solution-card p-4 bg-white rounded shadow-sm">
+                        <img src="advanced-analytics.jpg" alt="Advanced Analytics" class="solution-image">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-chart-bar fa-2x text-primary me-3"></i>
+                            <h4 class="mb-0" data-translate="advanced_analytics">Advanced Analytics</h4>
+                        </div>
+                        <p class="text-muted" data-translate="advanced_analytics_desc">
+                            Turn data into decisions with AIOPT's advanced analytics. Track performance improvements, 
+                            measure ROI, and optimize your network with data-driven insights.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i><span data-translate="roi_tracking">ROI tracking</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-translate="performance_metrics">Performance metrics</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-translate="cost_savings_visualization">Cost savings visualization</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="solution-card p-4 bg-white rounded shadow-sm">
+                        <img src="multi-vendor-support.jpg" alt="Multi-Vendor Support" class="solution-image">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-network-wired fa-2x text-primary me-3"></i>
+                            <h4 class="mb-0" data-translate="multi_vendor_support">Multi-Vendor Support</h4>
+                        </div>
+                        <p class="text-muted" data-translate="multi_vendor_support_desc">
+                            Work with your existing infrastructure. AIOPT supports all major vendors including 
+                            Cisco, Juniper, Nokia, and Huawei with seamless integration.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i><span data-translate="vendor_agnostic">Vendor agnostic</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-translate="seamless_integration">Seamless integration</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-translate="api_first_approach">API-first approach</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-4" data-translate="technology_title">Advanced Technology</h2>
+                    <p class="lead text-muted" data-translate="technology_subtitle">
+                        Cutting-edge AI/ML capabilities with enterprise-grade architecture and security.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-card text-center p-4 h-100">
+                        <img src="ml-models.jpg" alt="ML Models" class="tech-image">
+                        <div class="tech-icon mb-3">
+                            <i class="fas fa-brain fa-2x" style="color: #00ff88;"></i>
+                        </div>
+                        <h5 data-translate="ml_models">6 ML Models</h5>
+                        <p class="text-muted small" data-translate="ml_models_desc">Trained models with high accuracy for network optimization</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-card text-center p-4 h-100">
+                        <img src="accuracy-target.jpg" alt="100% Accuracy" class="tech-image">
+                        <div class="tech-icon mb-3">
+                            <i class="fas fa-bullseye fa-2x" style="color: #ffaa00;"></i>
+                        </div>
+                        <h5 data-translate="accuracy">100% Accuracy</h5>
+                        <p class="text-muted small" data-translate="accuracy_desc">Anomaly detection with perfect accuracy</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-card text-center p-4 h-100">
+                        <img src="real-time-optimization.jpg" alt="Real-Time" class="tech-image">
+                        <div class="tech-icon mb-3">
+                            <i class="fas fa-bolt fa-2x" style="color: #0088ff;"></i>
+                        </div>
+                        <h5 data-translate="real_time">Real-Time</h5>
+                        <p class="text-muted small" data-translate="real_time_desc">Instant optimization and response</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-card text-center p-4 h-100">
+                        <img src="enterprise-security-tech.jpg" alt="Enterprise Security" class="tech-image">
+                        <div class="tech-icon mb-3">
+                            <i class="fas fa-shield-alt fa-2x" style="color: #ff4444;"></i>
+                        </div>
+                        <h5 data-translate="security">Enterprise Security</h5>
+                        <p class="text-muted small" data-translate="security_desc">Zero-trust architecture and advanced security</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section id="demo" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-4" data-translate="demo_title">Watch AIOpt AB in Action</h2>
+                    <p class="lead text-muted" data-translate="demo_subtitle">
+                        See how our AI-powered platform transforms telecom network operations with real-time optimization and predictive analytics.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="video-demo-container">
+                        <video controls class="demo-video" poster="aiopt-logo-gold.png">
+                            <source src="aiopt-demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay-play">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-4" data-translate="results_title">Proven Results</h2>
+                    <p class="lead text-white-50" data-translate="results_subtitle">
+                        Our customers are seeing incredible improvements in efficiency and cost savings.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="result-card text-center p-4">
+                        <h3 class="text-primary fw-bold">75%</h3>
+                        <p class="text-white-50" data-translate="cost_reduction_result">Cost Reduction</p>
+                        <small class="text-muted" data-translate="cost_reduction_detail">From $1M to $250K annually</small>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="result-card text-center p-4">
+                        <h3 class="text-primary fw-bold">60%</h3>
+                        <p class="text-white-50" data-translate="faster_detection">Faster Detection</p>
+                        <small class="text-muted" data-translate="faster_detection_detail">From 2 hours to 30 minutes</small>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="result-card text-center p-4">
+                        <h3 class="text-primary fw-bold">70%</h3>
+                        <p class="text-white-50" data-translate="resolution_time">Resolution Time</p>
+                        <small class="text-muted" data-translate="resolution_time_detail">From 4 hours to 1 hour</small>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="result-card text-center p-4">
+                        <h3 class="text-primary fw-bold">25%</h3>
+                        <p class="text-white-50" data-translate="customer_satisfaction">Customer Satisfaction</p>
+                        <small class="text-muted" data-translate="customer_satisfaction_detail">Significant improvement</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-4" data-translate="contact_title">Get Started Today</h2>
+                    <p class="lead text-muted" data-translate="contact_subtitle">
+                        Ready to transform your network operations? Contact us to learn more about AIOPT Platform.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-card p-5 bg-white rounded shadow">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h5 class="mb-3" data-translate="contact_info">Contact Information</h5>
+                                <div class="contact-item mb-3">
+                                    <i class="fas fa-envelope text-primary me-2"></i>
+                                    <span>Jafar@aiopt.se</span>
+                                </div>
+                                <div class="contact-item mb-3">
+                                    <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                    <span>Chalmers University, Gothenburg</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-building text-primary me-2"></i>
+                                    <span>AIOpt AB</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="mb-3" data-translate="quick_contact">Quick Contact</h5>
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Your Name" data-translate="your_name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" placeholder="Your Email" data-translate="your_email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Company" data-translate="company">
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control" rows="3" placeholder="Message" data-translate="message"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">
+                                        <i class="fas fa-paper-plane me-2"></i><span data-translate="send_message">Send Message</span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Big Logo Section -->
+    <section class="big-logo-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <img src="aiopt-logo-gold.png" alt="AIOPT Platform" class="big-logo">
+                                            <h3 class="text-white mt-4" data-translate="ai_powered_optimization">AI-Powered Network Optimization</h3>
+                                            <p class="text-white-50" data-translate="transforming_telecom">Transforming telecom operations with advanced AI technology</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                                            <p class="mb-0">&copy; <span id="currentYear"></span> AIOpt AB. <span data-translate="all_rights_reserved">All rights reserved.</span></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="https://aiopt.se" target="_blank" class="text-white me-3" title="Visit AIOpt.se">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/aiopt/" target="_blank" class="text-white me-3" title="Follow us on LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
