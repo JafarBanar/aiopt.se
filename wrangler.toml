@@ -1,0 +1,5 @@
+name = "aiopt-se"
+compatibility_date = "2025-08-04"
+
+[site]
+bucket = "." 
