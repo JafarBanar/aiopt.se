@@ -1,4 +1,9 @@
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin 
+  Referrer-Policy: strict-origin-when-cross-origin
+  Cache-Control: public, max-age=3600
+
+/team
+  Cache-Control: no-cache, no-store, must-revalidate
+  X-Robots-Tag: noindex, nofollow 
