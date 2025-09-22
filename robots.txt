@@ -7,3 +7,8 @@ Disallow: /team/
 # Allow main pages
 Allow: /
 Allow: /index.html
+Allow: /blog
+Allow: /case-studies
+
+# Sitemap
+Sitemap: https://aiopt.se/sitemap.xml
