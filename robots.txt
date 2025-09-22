@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block team page from being indexed
+Disallow: /team/
+
+# Allow main pages
+Allow: /
+Allow: /index.html
